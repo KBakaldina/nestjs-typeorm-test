@@ -5,15 +5,12 @@ export class User {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ length: 50 })
+    @Column()
     login: string;
 
-    @Column({ length: 500 })
+    @Column()
     password: string;
 
-    @Column({ length: 300 })
-    name: string;
-
-    @Column()
-    homeCityId: number;
+    @Column({ name: 'full_name' })
+    fullName: string;
 }
